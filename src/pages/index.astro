@@ -1,0 +1,69 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Badge from '../components/Badge.astro';
+import Github from '../components/iconos/Github.astro';
+import Linkedin from "../components/iconos/Linkedin.astro";
+import Correo from "../components/iconos/Correo.astro";
+import Code from '../components/iconos/Code.astro';
+import Proyectos from '../components/Proyectos.astro';
+import Proyecto2 from '../components/Proyecto2.astro';
+import Proyecto3 from '../components/proyecto3.astro';
+import Proyecto4 from '../components/proyecto4.astro';
+import Esperiencia from '../components/Esperiencia.astro';
+import Experiencia from '../components/iconos/Experiencia.astro'
+
+---
+
+<Layout title="Portafolio | Emir - Desarrollador y Programador web junior">
+	<main class="px-4  bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)]">
+		<section id="about" class="w-full mx-auto lg:w-[740px]  pt-28 pb-16">
+			<img class=
+			"rounded-full w-[90px] h-[90px] mb-4"  
+			src="../../imagenes/foto.png" 
+			alt="mi foto"/>
+			<h1 class=" dark:text-white text-3xl lg:text-5xl md:text-4xl font-bold flex justify-center flex-row gap-x-4 pb-6 lg:pb-10">
+				Hola!, soy Emir Huaroc
+				<div class="flex justify-center items-center dark:text-white ">
+					<Badge>Programador junior
+					</Badge>
+				</div>
+			</h1>
+			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px] dark:text-white ">Desarrollador full stack con <span class="font-bold	">conocimientos en: REACT, Laravel, PHP, Python, JS , tailwind , CSS, HTLM y Java.</span> De Lima-Peru</h2>
+			<ul class="pt-7 flex gap-x-2" >
+				<li class="pl-4 hover:scale-110">
+					<a class="rounded-full border-2 border-gray-800	 flex justify-center items-center
+					gap-x-2 py-2 px-2 dark:text-white " href="https://github.com/EMHO3"><Github/> mi Github</a>
+				</li>
+				<li class="pl-4 hover:scale-110">
+					<a class="rounded-full border-2 border-gray-800	 flex justify-center items-center
+					gap-x-2 py-2 px-2 dark:text-white " href="https://www.linkedin.com/in/emir-huaroc-olivera-583068250/"><Linkedin/> mi linkelind</a>
+				</li>
+				<li class="pl-4 hover:scale-110">
+					<div class="rounded-full border-2 border-gray-800 dark:text-white flex justify-center items-center
+					gap-x-2 py-2 px-2">
+						<Correo />emirmho3@gmail.com
+					</div>
+				</li>
+			</ul>
+		</section>
+        <section class="w-full mx-auto lg:w-[740px]  py-12">
+			<h1 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center dark:text-white"><Experiencia/> Experiencia laboral en el sector</h1>
+			<Esperiencia/>
+		</section>
+
+		<section id="proyectos" class="w-full mx-auto lg:w-[740px]  py-16">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center dark:text-white"><Code class="size-7"/> Proyectos</h2>
+			<Proyectos/>
+			<Proyecto2/>
+			<Proyecto3/>
+			<Proyecto4/>
+		</section>
+
+		
+	</main>
+</Layout>
+
+<style>
+	
+</style>

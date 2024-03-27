@@ -1,0 +1,33 @@
+---
+const PROJECTS=[
+    {
+        title:"Billetera digital",
+        descripcion:"Proyecto de billetera digital en el que puedes registrar gastos y registrar 'transacciones' hecho con Laravel 10",
+        link:"https://github.com/EMHO3/billetera-laravel10",
+        image:"../../imagenes/98shots_so.jpg",
+        tags:['PHP','LARAVEL','Tailwind','react']
+    }
+]
+---
+
+{
+    PROJECTS.map(project=>(
+        <article>
+            <h3 class="text-2xl font-semibold">{project.title}</h3>
+            <p class="text-lg mb-2 text-pretty">{project.descripcion}</p>
+            <a href="https://github.com/EMHO3/billetera-laravel10" class="font-semibold  text-lg mb-2 text-pretty">Link del proyecto en github</a>
+            <ul class="pt-2">
+                <p>lenguajes y/o frameworks que se utilizaron:</p>
+                {
+                project.tags.map(tag=>(
+                    <li>{tag}</li>
+                ))
+            }
+            </ul>
+            <img
+            class="h-[450px] rounded shadow-2xl" 
+            src={project.image} 
+            alt={`captura de pantalla del proyecto ${project.image} `} />
+        </article>
+    ))
+}

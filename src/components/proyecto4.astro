@@ -1,0 +1,35 @@
+---
+const PROJECTS=[
+    {
+        title:"Post de blogs | CRUD",
+        descripcion:"Proyecto en donde podras creas post de notas que tiene un titulo principal y un 'body' como contenido y para poder hacer todo esto tendras que hacer login y asi crear editar y eliminar los posts",
+        link:"https://github.com/EMHO3/projecto_laravel9",
+        image:"../../imagenes/585shots_so.jpg",
+        tags:['PHP','LARAVEL 10','Bootstrap']
+    }
+]
+---
+
+{
+    PROJECTS.map(project=>(
+        <article>
+            <h3 class="text-2xl font-semibold pt-10" >{project.title}</h3>
+            <p class="text-lg mb-2 text-pretty">{project.descripcion}</p>
+            <a href="https://github.com/EMHO3/projecto_laravel9" class="text-lg mb-2 text-pretty font-bold">Link del proyecto en github</a>
+
+
+            <ul class="pt-2">
+                <p>lenguajes y/o frameworks que se utilizaron:</p>
+                {
+                project.tags.map(tag=>(
+                    <li>{tag}</li>
+                ))
+            }
+            </ul>
+            <img
+            class="h-[450px] w-[1050px] rounded shadow-2xl" 
+            src={project.image} 
+            alt={`captura de pantalla del proyecto ${project.image} `} />
+        </article>
+    ))
+}

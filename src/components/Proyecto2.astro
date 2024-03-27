@@ -1,0 +1,35 @@
+---
+const PROJECTS=[
+    {
+        title:"Registros | CRUD",
+        descripcion:"Proyecto de registros de productos y varios tipos el cual es un crud completo puedes poner descripcion del producto el precio y stock editarlo y eliminarlo",
+        link:"https://github.com/EMHO3/Laravel10-React",
+        image:"../../imagenes/251shots_so.webp",
+        tags:['PHP','LARAVEL 10','Tailwind','react']
+    }
+]
+---
+
+{
+    PROJECTS.map(project=>(
+        <article>
+            <h3 class="text-2xl font-semibold pt-10" >{project.title}</h3>
+            <p class="text-lg mb-2 text-pretty">{project.descripcion}</p>
+            <a href="https://github.com/EMHO3/Laravel10-React" class="text-lg mb-2 text-pretty font-bold">Link del proyecto en github</a>
+
+
+            <ul class="pt-2">
+                <p>lenguajes y/o frameworks que se utilizaron:</p>
+                {
+                project.tags.map(tag=>(
+                    <li>{tag}</li>
+                ))
+            }
+            </ul>
+            <img
+            class="h-[450px] w-[1050px] rounded shadow-2xl" 
+            src={project.image} 
+            alt={`captura de pantalla del proyecto ${project.image} `} />
+        </article>
+    ))
+}

@@ -1,0 +1,35 @@
+---
+const PROJECTS=[
+    {
+        title:"Punto de venta | CRUD",
+        descripcion:"Proyecto de punto de venta en el que puedes registrar: proovedores, ingresos, clientes,ventas, productos y sus categorias con crud completo",
+        link:"https://github.com/EMHO3/puntoventa_laravel10",
+        image:"../../imagenes/318shots_so.png",
+        tags:['PHP','LARAVEL 10','Bootstrap','JS']
+    }
+]
+---
+
+{
+    PROJECTS.map(project=>(
+        <article>
+            <h3 class="text-2xl font-semibold pt-10" >{project.title}</h3>
+            <p class="text-lg mb-2 text-pretty">{project.descripcion}</p>
+            <a href="https://github.com/EMHO3/puntoventa_laravel10" class="text-lg mb-2 text-pretty font-bold">Link del proyecto en github</a>
+
+
+            <ul class="pt-2">
+                <p>lenguajes y/o frameworks que se utilizaron:</p>
+                {
+                project.tags.map(tag=>(
+                    <li>{tag}</li>
+                ))
+            }
+            </ul>
+            <img
+            class="h-[450px] w-[1050px] rounded shadow-2xl" 
+            src={project.image} 
+            alt={`captura de pantalla del proyecto ${project.image} `} />
+        </article>
+    ))
+}
